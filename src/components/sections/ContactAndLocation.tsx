@@ -55,11 +55,11 @@ export function ContactAndLocation() {
             <div className="flex flex-col gap-4 text-kazen-sand/80 font-light">
               <div className="flex items-center gap-4">
                 <MapPin size={18} className="text-kazen-gold" />
-                <span>1200 Zen Avenue, Culinary District, NY 10001</span>
+                <span>570-2 Gionmachi Minamigawa, Higashiyama Ward, Kyoto 605-0074, Japan</span>
               </div>
               <div className="flex items-center gap-4">
                 <Phone size={18} className="text-kazen-gold" />
-                <span>+1 (212) 555-0199</span>
+                <span>+81 75-555-0199</span>
               </div>
               <div className="flex items-center gap-4">
                 <Mail size={18} className="text-kazen-gold" />
@@ -70,27 +70,31 @@ export function ContactAndLocation() {
         </div>
 
         {/* Map Section */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2 }}
-          className="w-full lg:w-1/2 h-[500px] lg:h-full relative grayscale hover:grayscale-0 transition-all duration-1000"
-        >
-          {/* We use an iframe for Google Maps, styled darkly if possible, but standard embed works */}
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d193595.25279998246!2d-74.14448766155917!3d40.69766840263673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1716035123456!5m2!1sen!2sus" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={false} 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Kazen Location"
-            className="absolute inset-0"
-          ></iframe>
-          <div className="absolute inset-0 bg-kazen-black/40 pointer-events-none mix-blend-multiply" />
-        </motion.div>
+        <div className="w-full lg:w-1/2 p-10 md:p-20 flex flex-col justify-center">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+            className="w-full h-[400px] lg:h-[500px] relative rounded-sm overflow-hidden border border-kazen-white/10 shadow-2xl"
+          >
+            {/* We use CSS filters to force the standard Google Maps embed into a dark luxury aesthetic */}
+            <iframe 
+              src="https://maps.google.com/maps?q=Gionmachi%20Minamigawa,%20Kyoto,%20Japan&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Kazen Location"
+              className="absolute inset-0 w-full h-full invert-[0.95] grayscale-[0.8] contrast-[1.2]"
+            ></iframe>
+            {/* Gold/dark tint overlay for cohesiveness */}
+            <div className="absolute inset-0 bg-kazen-gold/10 pointer-events-none mix-blend-overlay" />
+            <div className="absolute inset-0 bg-kazen-black/20 pointer-events-none" />
+          </motion.div>
+        </div>
 
       </div>
     </section>
