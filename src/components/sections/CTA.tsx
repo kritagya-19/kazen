@@ -23,9 +23,10 @@ export function CTA() {
           
           <a 
             href="#reservation" 
-            className="inline-block bg-transparent border-2 border-kazen-gold text-kazen-gold px-12 py-5 uppercase tracking-widest text-sm font-semibold hover:bg-kazen-gold hover:text-kazen-black transition-all duration-500 shadow-[0_0_20px_rgba(212,175,55,0.1)] hover:shadow-[0_0_40px_rgba(212,175,55,0.4)]"
+            className="group relative inline-flex items-center justify-center px-12 py-5 border border-kazen-gold text-kazen-gold uppercase tracking-widest text-sm font-semibold overflow-hidden transition-all duration-700 shadow-[0_0_20px_rgba(212,175,55,0.1)] hover:shadow-[0_0_40px_rgba(212,175,55,0.4)]"
           >
-            Reserve Your Table
+            <span className="absolute inset-0 w-0 bg-kazen-gold transition-all duration-700 ease-out group-hover:w-full" />
+            <span className="relative z-10 group-hover:text-kazen-black transition-colors duration-700">Reserve Your Table</span>
           </a>
         </motion.div>
       </div>

@@ -56,9 +56,10 @@ export function Navbar() {
             ))}
             <a
               href="#reservation"
-              className="px-6 py-3 border border-kazen-gold text-kazen-gold uppercase tracking-widest text-xs font-semibold hover:bg-kazen-gold hover:text-kazen-black transition-all duration-300"
+              className="group relative inline-flex items-center justify-center px-6 py-3 border border-kazen-gold text-kazen-gold uppercase tracking-widest text-xs font-semibold overflow-hidden transition-all duration-700"
             >
-              Reserve Table
+              <span className="absolute inset-0 w-0 bg-kazen-gold transition-all duration-700 ease-out group-hover:w-full" />
+              <span className="relative z-10 group-hover:text-kazen-black transition-colors duration-700">Reserve Table</span>
             </a>
           </div>
 
@@ -103,9 +104,10 @@ export function Navbar() {
               <motion.a
                 href="#reservation"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-8 px-8 py-4 border border-kazen-gold text-kazen-gold uppercase tracking-widest text-sm font-semibold hover:bg-kazen-gold hover:text-kazen-black transition-all duration-300"
+                className="group relative inline-flex items-center justify-center mt-8 px-8 py-4 border border-kazen-gold text-kazen-gold uppercase tracking-widest text-sm font-semibold overflow-hidden transition-all duration-700"
               >
-                Reserve Table
+                <span className="absolute inset-0 w-0 bg-kazen-gold transition-all duration-700 ease-out group-hover:w-full" />
+                <span className="relative z-10 group-hover:text-kazen-black transition-colors duration-700">Reserve Table</span>
               </motion.a>
             </div>
           </motion.div>
