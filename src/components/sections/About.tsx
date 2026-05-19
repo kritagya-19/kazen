@@ -14,11 +14,11 @@ export function About() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="w-full lg:w-1/2 relative"
           >
-            <div className="absolute -inset-4 bg-kazen-gray/50 transform rotate-3 scale-105 z-0" />
+            <div className="absolute -inset-2 md:-inset-4 bg-kazen-gray/50 transform rotate-3 scale-105 z-0" />
             <img 
               src={interiorImg} 
               alt="Kazen Interior" 
-              className="relative z-10 w-full h-[600px] object-cover grayscale-[30%] brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-700"
+              className="relative z-10 w-full h-[350px] sm:h-[450px] md:h-[600px] object-cover grayscale-[30%] brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-700"
             />
           </motion.div>
 

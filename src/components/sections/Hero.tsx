@@ -38,7 +38,7 @@ export function Hero() {
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" />
 
       {/* Main Content Area - Editorial Layout */}
-      <div className="relative z-10 w-full container mx-auto px-6 md:px-12 pb-24 md:pb-32 flex flex-col md:flex-row justify-between items-end">
+      <div className="relative z-10 w-full container mx-auto px-6 md:px-12 pb-24 md:pb-32 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-0">
         
         {/* Left Typography Block */}
         <div className="w-full md:w-2/3 max-w-4xl">
@@ -46,10 +46,10 @@ export function Hero() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center gap-6 mb-8"
+            className="flex items-center gap-4 md:gap-6 mb-6 md:mb-8"
           >
-            <div className="h-[1px] w-12 md:w-24 bg-kazen-gold" />
-            <span className="text-kazen-gold tracking-[0.4em] uppercase text-[0.65rem] md:text-xs font-semibold">
+            <div className="h-[1px] w-8 md:w-24 bg-kazen-gold" />
+            <span className="text-kazen-gold tracking-[0.2em] md:tracking-[0.4em] uppercase text-[0.6rem] md:text-xs font-semibold">
               Kyoto • Minimalist • Plant-Based
             </span>
           </motion.div>
@@ -58,7 +58,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-5xl md:text-7xl lg:text-[6.5rem] leading-[1.1] text-kazen-white font-medium tracking-wide"
+            className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] leading-[1.2] md:leading-[1.1] text-kazen-white font-medium tracking-wide"
           >
             Elevating <br />
             <span className="italic font-serif text-kazen-sand/80 font-light">Nature's Essence</span>
@@ -70,13 +70,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full md:w-1/3 mt-16 md:mt-0 flex flex-col items-start md:items-end text-left md:text-right"
+          className="w-full md:w-1/3 flex flex-col items-start md:items-end text-left md:text-right"
         >
-          <p className="text-kazen-sand/70 text-sm md:text-base font-light tracking-wide max-w-[280px] leading-relaxed mb-12">
+          <p className="text-kazen-sand/70 text-xs sm:text-sm md:text-base font-light tracking-wide max-w-[280px] leading-relaxed mb-8 md:mb-12">
             An immersive dining narrative where traditional Japanese techniques meet contemporary vegetarian artistry.
           </p>
           
-          <div className="flex flex-col items-center md:items-end gap-6 opacity-70 hover:opacity-100 transition-opacity">
+          <div className="flex flex-col items-start md:items-end gap-6 opacity-70 hover:opacity-100 transition-opacity hidden md:flex">
             <span className="[writing-mode:vertical-rl] text-[0.65rem] uppercase tracking-[0.3em] text-kazen-white md:mr-2">
               Scroll to explore
             </span>

@@ -43,39 +43,39 @@ export function LoyaltyOffer() {
           </div>
 
           {/* Luxury Coupon/Card */}
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full lg:w-1/2 flex justify-center mt-4 md:mt-0">
             <motion.div
               whileHover={{ scale: 1.02, rotateY: 5, rotateX: 2 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="relative w-full max-w-md aspect-[1.6/1] rounded-sm bg-kazen-gray p-[1px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group perspective-1000 cursor-default"
+              className="relative w-full max-w-md aspect-auto sm:aspect-[1.6/1] rounded-sm bg-kazen-gray p-[1px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group perspective-1000 cursor-default"
             >
               {/* Animated Border Gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-kazen-gold/40 via-kazen-black to-kazen-gold/20 opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
               
               {/* Inner Card */}
-              <div className="relative h-full w-full bg-kazen-black flex flex-col justify-between p-8 z-10 overflow-hidden">
+              <div className="relative h-full w-full bg-kazen-black flex flex-col justify-between p-6 md:p-8 z-10 overflow-hidden">
                 {/* Background Texture inside card */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" />
 
                 <div className="relative z-10 flex justify-between items-start">
                   <div>
-                    <span className="text-kazen-white font-display text-2xl tracking-[0.2em] font-bold">KAZEN</span>
-                    <p className="text-kazen-gold text-[0.65rem] tracking-[0.25em] uppercase mt-2">Privilege Card</p>
+                    <span className="text-kazen-white font-display text-xl md:text-2xl tracking-[0.2em] font-bold">KAZEN</span>
+                    <p className="text-kazen-gold text-[0.55rem] md:text-[0.65rem] tracking-[0.25em] uppercase mt-2">Privilege Card</p>
                   </div>
-                  <Ticket size={28} className="text-kazen-gold/80" strokeWidth={1} />
+                  <Ticket size={24} className="text-kazen-gold/80 hidden sm:block" strokeWidth={1} />
                 </div>
                 
-                <div className="relative z-10 flex flex-col gap-6 mt-8">
-                  <div className="flex flex-col gap-2">
-                    <span className="text-kazen-sand/40 text-[0.65rem] tracking-[0.2em] uppercase">Access Code</span>
-                    <span className="text-kazen-white font-mono text-3xl tracking-[0.15em]">KAZEN<span className="text-kazen-gold">RETURN</span></span>
+                <div className="relative z-10 flex flex-col gap-5 md:gap-6 mt-6 md:mt-8">
+                  <div className="flex flex-col gap-1 md:gap-2">
+                    <span className="text-kazen-sand/40 text-[0.55rem] md:text-[0.65rem] tracking-[0.2em] uppercase">Access Code</span>
+                    <span className="text-kazen-white font-mono text-xl sm:text-2xl md:text-3xl tracking-[0.1em] md:tracking-[0.15em] break-all">KAZEN<span className="text-kazen-gold">RETURN</span></span>
                   </div>
                   
                   <button 
                     onClick={handleCopy}
-                    className="self-start px-8 py-3 border border-kazen-gold/50 text-kazen-gold text-xs tracking-widest uppercase hover:bg-kazen-gold hover:text-kazen-black transition-all duration-300"
+                    className="self-start px-6 md:px-8 py-2 md:py-3 border border-kazen-gold/50 text-kazen-gold text-[0.6rem] md:text-xs tracking-widest uppercase hover:bg-kazen-gold hover:text-kazen-black transition-all duration-300"
                   >
-                    {copied ? 'Copied to Clipboard' : 'Copy Code'}
+                    {copied ? 'Copied' : 'Copy Code'}
                   </button>
                 </div>
               </div>
