@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import dish1 from '../../assets/dish1.png';
-import dish2 from '../../assets/dish2.png';
-import dish3 from '../../assets/dish3.png';
-import dish4 from '../../assets/dish4.png';
-import dish5 from '../../assets/dish5.png';
+import dish1 from '../../assets/dish1.webp';
+import dish2 from '../../assets/dish2.webp';
+import dish3 from '../../assets/dish3.webp';
+import dish4 from '../../assets/dish4.webp';
+import dish5 from '../../assets/dish5.webp';
 
 const signatures = [
   {
@@ -115,21 +115,6 @@ export function SignatureShowcase() {
         {signatures.map((dish, index) => (
           <ParallaxDishCard key={dish.id} dish={dish} index={index} />
         ))}
-      </div>
-
-      {/* Concluding CTA */}
-      <div className="h-[60vh] bg-kazen-black flex flex-col items-center justify-center relative z-20 shadow-[0_-30px_60px_rgba(0,0,0,0.9)]">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <a href="#menu-full" className="group relative inline-flex items-center justify-center px-12 py-6 border border-kazen-gold text-kazen-gold uppercase tracking-[0.2em] text-sm font-semibold overflow-hidden transition-all duration-700">
-            <span className="absolute inset-0 w-0 bg-kazen-gold transition-all duration-700 ease-out group-hover:w-full" />
-            <span className="relative z-10 group-hover:text-kazen-black transition-colors duration-700">Explore Full Tasting Menu</span>
-          </a>
-        </motion.div>
       </div>
       
     </section>

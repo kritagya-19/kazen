@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import heroBg from '../../assets/hero-bg.png';
+import heroBg from '../../assets/hero-bg.webp';
 
 export function Hero() {
   const { scrollY } = useScroll();

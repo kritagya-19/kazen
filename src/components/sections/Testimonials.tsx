@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import rev1 from '../../assets/reviewer1.png';
-import rev2 from '../../assets/reviewer2.png';
-import rev3 from '../../assets/reviewer3.png';
+import rev1 from '../../assets/reviewer1.webp';
+import rev2 from '../../assets/reviewer2.webp';
+import rev3 from '../../assets/reviewer3.webp';
 
 const testimonials = [
   {

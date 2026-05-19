@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import interiorImg from '../../assets/interior.png';
+import interiorImg from '../../assets/interior.webp';
 
 export function About() {
   return (
